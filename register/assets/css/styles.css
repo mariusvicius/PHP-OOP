@@ -1,0 +1,342 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Open Sans";
+}
+
+footer p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-top: 100px;
+}
+
+main {
+  max-width: 960px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.logo {
+  width: 100%;
+  max-width: 150px;
+  margin: 50px auto 0;
+  display: block;
+}
+
+.logo img {
+  text-align: center;
+  max-width: 150px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 12px;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+#add-register {
+  background-color: rgb(59, 118, 228);
+  color: #fff;
+  border-radius: 2px;
+  width: 170px;
+  display: inline-block;
+}
+
+#dialog form input[type="submit"]:hover,
+#add-register:hover {
+  background-color: rgb(51, 94, 172);
+}
+
+#add-register:before {
+  content: "+";
+  padding-right: 7px;
+  font-weight: 600;
+}
+
+.filter-area {
+  width: calc(100% - 174px);
+  display: inline-block;
+}
+
+.navigation {
+  margin-bottom: 30px;
+}
+
+.register-table {
+  table-layout: fixed;
+  border: 1px solid rgb(224, 224, 224);
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.register-table td {
+  border: 1px solid rgb(224, 224, 224);
+  padding: 10px;
+}
+
+.register-table th {
+  border: 1px solid rgb(224, 224, 224);
+  background-color: rgb(235, 235, 235);
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.edit-register {
+  text-decoration: none;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background: seagreen;
+  background-size: 50%;
+  margin: 0px 3px -7px;
+  transition: all 0.3s;
+}
+
+.edit-register img {
+  width: 10px;
+}
+
+.remove-register {
+  text-decoration: none;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 2px;
+  background: rgb(173, 12, 12);
+  background-size: 50%;
+  margin: 0px 3px -7px;
+  transition: all 0.3s;
+}
+
+.remove-register img {
+  width: 10px;
+}
+
+.edit-register:hover {
+  background-color: rgb(38, 109, 69);
+  background-size: 65%;
+}
+
+.remove-register:hover {
+  background-color: rgb(129, 12, 12);
+  background-size: 65%;
+}
+
+#dialog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.dialog-bg {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.dialog-container {
+  display: none;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 5px 10px #00000052;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  padding: 20px 30px;
+  width: 300px;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+#dialog.open {
+  z-index: 10;
+  opacity: 1;
+}
+
+#dialog.open .dialog-bg {
+  opacity: 1;
+}
+
+#dialog.open .dialog-container {
+  display: block;
+}
+
+#dialog form h4 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#dialog form p {
+  margin-top: 0;
+}
+
+#dialog form p:last-child {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+#dialog form label {
+  font-size: 12px;
+  display: block;
+}
+
+#dialog-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background-color: rgb(58, 58, 58);
+  color: #fff;
+  font-size: 13px;
+  border-radius: 50px;
+  padding: 5px;
+  text-align: center;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+form .input-text {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid rgb(224, 224, 224);
+  display: block;
+}
+
+form .input-text.error {
+  border: 1px solid rgb(247, 1, 1);
+}
+
+#dialog-results {
+  color: rgb(247, 1, 1);
+  font-size: 12px;
+}
+
+form input[type="submit"] {
+  background-color: rgb(59, 118, 228);
+  color: #fff;
+  border-radius: 2px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border: 0 none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#dialog form input[type="submit"].remove-btn {
+  background-color: rgb(146, 15, 15);
+}
+
+form#search .input-text {
+  display: inline-block;
+  width: 200px;
+  padding: 10px 5px;
+}
+
+form#search select {
+  display: inline-block;
+  background-color: #fff;
+  padding: 10px 5px;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 2px;
+}
+
+form#search input[type="submit"] {
+  margin-top: 0;
+  background-color: rgb(85, 85, 85);
+}
+
+form#search input[type="submit"]:hover {
+  margin-top: 0;
+  background-color: rgb(37, 37, 37);
+}
+
+.form-wrapper {
+  background-color: rgb(235, 235, 235);
+  padding: 5px;
+  border: 1px solid rgb(224, 224, 224);
+  display: inline-block;
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.input-wrap #clear {
+  position: absolute;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(211, 71, 71);
+  color: #fff;
+  text-align: center;
+  top: 1px;
+  right: 10px;
+  border-radius: 50px;
+  line-height: 17px;
+  cursor: pointer;
+  font-size: 12px;
+  display: none;
+}
+
+.install-form {
+  width: 300px;
+  background-color: rgb(235, 235, 235);
+  padding: 20px;
+  border: 1px solid rgb(224, 224, 224);
+  text-align: center;
+  margin: 40px auto;
+  box-shadow: 0px 5px 10px #00000052;
+}
+
+.install-form p {
+  margin-top: 0;
+}
+
+.install-form label {
+  display: block;
+}
