@@ -4,7 +4,7 @@ PHP 7.3.21
 MySQL 8.0.21
 Apache 2.4.46
 
-Paleisti reiktų naudojant index.php
+Paleisti reiktų naudojant register/index.php
 Pirmą kartą paleidžiant pasileidžia installeris ir jis padės suaktyvuoti DB, dėl to nereikia nieko rašyti į kodą.
 
 Programoje, galima įdėti, keisti, trinti transportus.

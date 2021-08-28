@@ -14,7 +14,7 @@ $registerView = new Register\RegisterView();
         <title>Autoparko registratūra</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="<?php echo baseurl(); ?>assets/images/icon.jpg">
+        <link rel="shortcut icon" href="<?php echo baseurl(); ?>assets/images/icon.png">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="<?php echo baseurl(); ?>assets/css/styles.css">
     </head>
@@ -34,7 +34,7 @@ $registerView = new Register\RegisterView();
             ?>
         </main>
         <footer>
-            <p>2021 vlantana</p>
+            <p>2021 agam</p>
         </footer>
         <div id="dialog" class="dialog">
             <div class="dialog-container">
